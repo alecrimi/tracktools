@@ -22,5 +22,5 @@ if you use the overall toolbox please cite
 Crimi, Alessandro, Luca Giancardo, Fabio Sambataro, Alessandro Gozzi, Vittorio Murino, and Diego Sona. "Multilink analysis: Brain network comparison via sparse connectivity analysis." Scientific reports 9, no. 1 (2019): 1-13. https://www.nature.com/articles/s41598-018-37300-4
 Check the main repo: https://github.com/alecrimi/multi-link
 
-If you use the xtg visualizer please cite 
+If you use the xtg visualizer please also cite 
 Hähn D, Rannou N, Ahtam B, Grant PE, Pienaar R: Neuroimaging in the Browser using the X Toolkit. Front. Neuroinform. Conference https://www.nature.com/articles/s41598-018-37300-4
