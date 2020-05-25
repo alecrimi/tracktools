@@ -1,0 +1,126 @@
+<!-- 
+/*
+ *
+ * This page uses a javascript from the X Toolkit (XTK) licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * The data used here is the demo file of Surf-Ice https://www.nitrc.org/projects/surfice/
+ *
+ */
+-->
+
+<html>
+<head>
+<title>Brainfibers</title>
+
+<script type="text/javascript" src="files/xtk.js"></script>
+
+<script type="text/javascript">
+  window.onload = function() {
+
+    renderer = new X.renderer3D();
+    renderer.container = 'r';
+    renderer.config.PICKING_ENABLED = false;
+    renderer.init();
+    
+    complete = new X.fibers();
+    complete.file = 'stroke.trk';
+    complete.opacity = 1.0;
+    
+     
+    renderer.add(complete);
+  
+    renderer.camera.up = [0,0,1];
+    renderer.camera.position = [-150,0,0];
+    
+    renderer.render();
+    
+    
+    
+  };
+</script>
+
+
+<style type="text/css">
+body {
+  font-family: sans-serif;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+div.logoBox {
+  background-color: #ffffff;
+  width: 20%;
+  float: right;
+  margin-bottom: 10px;
+}
+
+div.anatomyBox {
+  background-color: #000000;
+  width: 20%;
+  height: 63px;
+  float: right;
+  line-height: 63px;
+}
+
+div:hover.anatomyBox {
+  background-color: #736AFF;
+}
+
+div.anatomyBox span {
+  color: #ffffff;
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-left: 10px;
+  cursor: hand;
+}
+
+.tinyText {
+  font-size: 0.5em;
+}
+</style>
+
+<script type="text/javascript">
+
+  function restore() {
+    
+    
+    complete.opacity = 1.0;
+    
+  }
+
+  function highlight(objectname) {
+    
+    restore();
+
+    complete.opacity = 0.1;
+    
+    // retrieve object
+    object = eval(objectname);
+    object.visible = true;
+ 
+    
+  }
+</script>
+
+<body>
+  
+  <!-- the container for the renderer -->
+  <div id="r" style="background-color: #000000; width: 80%; height: 100%; float: left;"></div>
+
+  <div class="logoBox">
+    <center>
+<br><br>
+     To move, rotate and scale, use the three buttons of your mouse
+
+<br><br>
+      <br>
+      This visualizer uses a javascript from XTK
+      The X Toolkit (XTK) is licensed under the MIT License:
+        http://www.opensource.org/licenses/mit-license.php
+<br><br>
+      The used file is the demo file of Surf-Ice https://www.nitrc.org/projects/surfice/
+    </center>
+  </div> 
+  
+</body>
